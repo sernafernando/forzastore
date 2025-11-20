@@ -1,0 +1,26 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="interGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#28a745;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#20c997;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Compact UPS Body -->
+  <rect x="70" y="100" width="160" height="120" rx="8" fill="url(#interGrad)"/>
+
+  <!-- Top Display -->
+  <rect x="85" y="115" width="130" height="35" rx="3" fill="#1a1a1a"/>
+  <circle cx="105" cy="132" r="4" fill="#0f0"/>
+  <circle cx="125" cy="132" r="4" fill="#ff0"/>
+  <text x="155" y="137" font-family="Arial" font-size="16" fill="#0ff" font-weight="bold">AVR</text>
+
+  <!-- Power Button -->
+  <circle cx="150" cy="175" r="12" fill="#fff" opacity="0.9"/>
+  <path d="M 150 167 L 150 175 M 145 171 A 5 5 0 1 1 155 171" stroke="#28a745" stroke-width="2" fill="none"/>
+
+  <!-- Bottom Outlets -->
+  <rect x="95" y="195" width="25" height="15" rx="2" fill="#1a1a1a"/>
+  <rect x="130" y="195" width="25" height="15" rx="2" fill="#1a1a1a"/>
+  <rect x="165" y="195" width="25" height="15" rx="2" fill="#1a1a1a"/>
+</svg>

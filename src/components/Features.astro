@@ -1,0 +1,198 @@
+---
+const features = [
+  {
+    icon: '🛡️',
+    title: 'Protección Total',
+    description: 'Tecnología avanzada contra picos, sobretensiones y caídas de voltaje.'
+  },
+  {
+    icon: '🌍',
+    title: 'Presencia Global',
+    description: 'Disponibles en más de 50 países con soporte local garantizado.'
+  },
+  {
+    icon: '⚙️',
+    title: 'Alta Eficiencia',
+    description: 'Diseños optimizados para máximo rendimiento y mínimo consumo.'
+  },
+  {
+    icon: '📱',
+    title: 'Gestión Inteligente',
+    description: 'Monitoreo remoto y control desde cualquier dispositivo.'
+  },
+  {
+    icon: '🔋',
+    title: 'Autonomía Extendida',
+    description: 'Baterías de larga duración con opciones de expansión.'
+  },
+  {
+    icon: '🏆',
+    title: 'Calidad Certificada',
+    description: 'Certificaciones internacionales y garantía extendida.'
+  }
+];
+
+const solutions = [
+  {
+    sector: 'Hogar',
+    description: 'Protege tu oficina en casa, entretenimiento y dispositivos conectados.',
+    image: '/images/solution-home.png'
+  },
+  {
+    sector: 'Empresarial',
+    description: 'Soluciones escalables para centros de datos y servidores críticos.',
+    image: '/images/solution-corporate.png'
+  },
+  {
+    sector: 'Educación',
+    description: 'Protección confiable para aulas digitales y laboratorios.',
+    image: '/images/solution-education.png'
+  },
+  {
+    sector: 'Retail',
+    description: 'Continuidad operativa para puntos de venta y sistemas POS.',
+    image: '/images/solution-point.png'
+  }
+];
+---
+
+<!-- Features Section -->
+<section id="caracteristicas" class="section-padding">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-4 fw-bold mb-3">
+        ¿Por qué <span class="gradient-text">FORZA</span>?
+      </h2>
+      <p class="lead text-muted">Características que nos hacen líderes en la industria</p>
+    </div>
+
+    <div class="row g-4">
+      {features.map((feature) => (
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-card text-center p-4">
+            <div class="feature-icon mb-3">
+              <span style="font-size: 3rem;">{feature.icon}</span>
+            </div>
+            <h4 class="mb-3">{feature.title}</h4>
+            <p class="text-muted mb-0">{feature.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Solutions Section -->
+<section id="soluciones" class="section-padding bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-4 fw-bold mb-3">
+        Soluciones por <span class="gradient-text">Sector</span>
+      </h2>
+      <p class="lead text-muted">Experiencia especializada para cada industria</p>
+    </div>
+
+    <div class="row g-4">
+      {solutions.map((solution) => (
+        <div class="col-lg-3 col-md-6">
+          <div class="solution-card h-100 text-center p-4 card-hover">
+            <div class="solution-icon mb-3">
+              <img src={solution.image} alt={solution.sector} class="solution-img" />
+            </div>
+            <h4 class="mb-3">{solution.sector}</h4>
+            <p class="text-muted mb-4">{solution.description}</p>
+            <a href="#contacto" class="btn btn-sm btn-outline-primary">Consultar</a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- CTA Banner -->
+    <div class="cta-banner mt-5 p-5 rounded-4 text-center text-white position-relative overflow-hidden">
+      <div class="position-relative z-1">
+        <h3 class="display-5 fw-bold mb-3">¿Listo para proteger tu inversión?</h3>
+        <p class="lead mb-4">Descubre la solución perfecta para tus necesidades de energía</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="#contacto" class="btn btn-light btn-lg">Solicitar Asesoría</a>
+          <a href="#productos" class="btn btn-outline-light btn-lg">Ver Productos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .feature-card {
+    height: 100%;
+    background: white;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,102,204,0.15);
+    border-color: var(--forza-primary);
+  }
+
+  .feature-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+  }
+
+  .feature-icon span {
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .solution-card {
+    background: white;
+    border-radius: 15px;
+    border: 1px solid #e9ecef;
+  }
+
+  .solution-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background: linear-gradient(135deg, var(--forza-primary) 0%, var(--forza-accent) 100%);
+    border-radius: 50%;
+    width: 100px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.2);
+  }
+
+  .solution-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+  }
+
+  .cta-banner {
+    background: linear-gradient(135deg, var(--forza-primary) 0%, var(--forza-secondary) 100%);
+  }
+
+  .cta-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.3;
+  }
+
+  .btn-outline-light:hover {
+    background: white;
+    color: var(--forza-primary);
+  }
+</style>

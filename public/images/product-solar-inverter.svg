@@ -1,0 +1,44 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="solarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffa500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff6b00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Solar Panel -->
+  <rect x="50" y="40" width="120" height="80" rx="5" fill="#1a1a1a" stroke="#ffa500" stroke-width="3"/>
+  <line x1="110" y1="40" x2="110" y2="120" stroke="#ffa500" stroke-width="1"/>
+  <line x1="50" y1="80" x2="170" y2="80" stroke="#ffa500" stroke-width="1"/>
+
+  <!-- Sun Icon -->
+  <circle cx="220" cy="60" r="20" fill="#ffa500" opacity="0.8"/>
+  <line x1="220" y1="30" x2="220" y2="35" stroke="#ffa500" stroke-width="2"/>
+  <line x1="220" y1="85" x2="220" y2="90" stroke="#ffa500" stroke-width="2"/>
+  <line x1="190" y1="60" x2="195" y2="60" stroke="#ffa500" stroke-width="2"/>
+  <line x1="245" y1="60" x2="250" y2="60" stroke="#ffa500" stroke-width="2"/>
+
+  <!-- Inverter Body -->
+  <rect x="60" y="140" width="180" height="120" rx="8" fill="url(#solarGrad)"/>
+
+  <!-- Display Screen -->
+  <rect x="75" y="160" width="100" height="50" rx="4" fill="#0a0a0a"/>
+  <text x="125" y="180" font-family="Arial" font-size="14" fill="#0f0" text-anchor="middle">5.2 kW</text>
+  <text x="125" y="198" font-family="Arial" font-size="12" fill="#0ff" text-anchor="middle">Solar Mode</text>
+
+  <!-- Connection Ports -->
+  <rect x="190" y="165" width="35" height="15" rx="2" fill="#222"/>
+  <text x="207" y="177" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">AC</text>
+  <rect x="190" y="190" width="35" height="15" rx="2" fill="#222"/>
+  <text x="207" y="202" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">DC</text>
+
+  <!-- Status LEDs -->
+  <circle cx="85" cy="230" r="5" fill="#0f0"/>
+  <circle cx="105" cy="230" r="5" fill="#0f0"/>
+  <circle cx="125" cy="230" r="5" fill="#ff0"/>
+
+  <!-- WiFi Symbol -->
+  <path d="M 200 230 Q 200 220, 210 220 Q 220 220, 220 230" stroke="#fff" fill="none" stroke-width="2" opacity="0.7"/>
+  <path d="M 203 232 Q 203 227, 210 227 Q 217 227, 217 232" stroke="#fff" fill="none" stroke-width="2" opacity="0.7"/>
+  <circle cx="210" cy="235" r="2" fill="#fff" opacity="0.7"/>
+</svg>

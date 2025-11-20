@@ -1,0 +1,32 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="upsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00a8e8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- UPS Body -->
+  <rect x="50" y="80" width="200" height="160" rx="10" fill="url(#upsGrad)"/>
+  <rect x="60" y="90" width="180" height="60" rx="5" fill="#001f3f" opacity="0.3"/>
+
+  <!-- Display -->
+  <rect x="70" y="100" width="160" height="40" rx="3" fill="#222"/>
+  <text x="150" y="125" font-family="Arial" font-size="24" fill="#0f0" text-anchor="middle" font-weight="bold">FORZA</text>
+
+  <!-- Buttons -->
+  <circle cx="85" cy="170" r="8" fill="#fff" opacity="0.8"/>
+  <circle cx="110" cy="170" r="8" fill="#fff" opacity="0.8"/>
+
+  <!-- Power Icon -->
+  <path d="M 200 165 L 200 180 M 190 172.5 A 10 10 0 1 1 210 172.5" stroke="#fff" stroke-width="3" fill="none" opacity="0.8"/>
+
+  <!-- Outlets -->
+  <rect x="80" y="200" width="30" height="20" rx="3" fill="#222"/>
+  <rect x="120" y="200" width="30" height="20" rx="3" fill="#222"/>
+  <rect x="160" y="200" width="30" height="20" rx="3" fill="#222"/>
+
+  <!-- Bottom vents -->
+  <line x1="70" y1="230" x2="230" y2="230" stroke="#001f3f" stroke-width="2" opacity="0.3"/>
+  <line x1="70" y1="235" x2="230" y2="235" stroke="#001f3f" stroke-width="2" opacity="0.3"/>
+</svg>

@@ -1,0 +1,40 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pduGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Rack Mount PDU -->
+  <rect x="40" y="110" width="220" height="80" rx="5" fill="url(#pduGrad)" stroke="#000" stroke-width="2"/>
+
+  <!-- Mounting Holes -->
+  <circle cx="55" cy="150" r="6" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+  <circle cx="245" cy="150" r="6" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+
+  <!-- LED Indicator -->
+  <circle cx="70" cy="130" r="4" fill="#0f0"/>
+  <text x="70" y="145" font-family="Arial" font-size="8" fill="#ccc" text-anchor="middle">PWR</text>
+
+  <!-- Outlets Row 1 -->
+  <rect x="100" y="120" width="20" height="15" rx="2" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+  <rect x="130" y="120" width="20" height="15" rx="2" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+  <rect x="160" y="120" width="20" height="15" rx="2" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+  <rect x="190" y="120" width="20" height="15" rx="2" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+  <rect x="220" y="120" width="20" height="15" rx="2" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+
+  <!-- Outlets Row 2 -->
+  <rect x="100" y="160" width="20" height="15" rx="2" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+  <rect x="130" y="160" width="20" height="15" rx="2" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+  <rect x="160" y="160" width="20" height="15" rx="2" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+  <rect x="190" y="160" width="20" height="15" rx="2" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+  <rect x="220" y="160" width="20" height="15" rx="2" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+
+  <!-- Network Port -->
+  <rect x="70" y="165" width="18" height="12" rx="2" fill="#0066cc" stroke="#004499" stroke-width="1"/>
+  <text x="79" y="188" font-family="Arial" font-size="7" fill="#ccc" text-anchor="middle">NET</text>
+
+  <!-- FORZA Label -->
+  <text x="150" y="150" font-family="Arial" font-size="12" fill="#ccc" text-anchor="middle" font-weight="bold">FORZA PDU</text>
+</svg>

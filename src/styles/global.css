@@ -1,0 +1,145 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  --forza-primary: #0066cc;
+  --forza-secondary: #003d7a;
+  --forza-accent: #00a8e8;
+  --forza-dark: #1a1a1a;
+  --forza-light: #f8f9fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--forza-primary) 0%, var(--forza-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-forza-primary {
+  background: linear-gradient(135deg, var(--forza-primary) 0%, var(--forza-accent) 100%);
+  border: none;
+  color: white;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-forza-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 102, 204, 0.3);
+  color: white;
+}
+
+.btn-forza-outline {
+  background: transparent;
+  border: 2px solid var(--forza-primary);
+  color: var(--forza-primary);
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-forza-outline:hover {
+  background: var(--forza-primary);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,102,204,0.2);
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Navbar custom */
+.navbar-forza {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  padding: 15px 0;
+}
+
+.navbar-forza.scrolled {
+  padding: 12px 0;
+}
+
+/* Hero section */
+.hero-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0066cc 0%, #003d7a 50%, #001f3f 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+}
+
+/* Footer */
+.footer-forza {
+  background: var(--forza-dark);
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.footer-forza a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-forza a:hover {
+  color: var(--forza-accent);
+}

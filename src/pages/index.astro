@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Products from '../components/Products.astro';
+import FeaturedProducts from '../components/FeaturedProducts';
+import Features from '../components/Features.astro';
+import BrandsSlider from '../components/BrandsSlider';
+import ContactForm from '../components/ContactForm';
+import Footer from '../components/Footer.astro';
+
+// Strapi configuration
+const STRAPI_URL = import.meta.env.PUBLIC_STRAPI_URL || 'http://localhost:1337';
+
+// Fetch featured products from Strapi
+let featuredProducts = [];
+try {
+  const response = await fetch(`${STRAPI_URL}/api/products?filters[featured][$eq]=true&populate=image`);
+  const data = await response.json();
+  featuredProducts = data.data.map((item: any) => ({
+    id: item.id,
+    name: item.attributes.name,
+    model: item.attributes.model,
+    description: item.attributes.description,
+    image: item.attributes.image?.data,
+    capacity: item.attributes.capacity,
+    features: item.attributes.features
+  }));
+} catch (error) {
+  console.error('Error fetching products from Strapi:', error);
+}
+---
+
+<Layout title="FORZA Power Technologies - Soluciones de Energía Inteligentes">
+  <Navbar />
+  <Hero />
+  <Products />
+  <FeaturedProducts products={featuredProducts} strapiUrl={STRAPI_URL} client:visible />
+  <Features />
+  <BrandsSlider client:visible />
+  <ContactForm client:visible />
+  <Footer />
+</Layout>
