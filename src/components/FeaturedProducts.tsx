@@ -54,6 +54,9 @@ export default function FeaturedProducts({ products, strapiUrl }: FeaturedProduc
     }
   }, []);
 
+  // Debug: log products count
+  console.log('FeaturedProducts received:', products.length, 'products');
+
   return (
     <section className="featured-products-section section-padding">
       <div className="container">
@@ -66,10 +69,16 @@ export default function FeaturedProducts({ products, strapiUrl }: FeaturedProduc
           </p>
         </div>
 
-        <div className="swiper-container-wrapper">
-          <div ref={swiperRef} className="swiper">
-            <div className="swiper-wrapper">
-              {products.map((product: Product) => {
+        {products.length === 0 ? (
+          <div className="text-center py-5">
+            <p className="text-muted">No hay productos destacados disponibles.</p>
+            <p className="text-muted small">Asegúrate de marcar productos como "featured" en Strapi.</p>
+          </div>
+        ) : (
+          <div className="swiper-container-wrapper">
+            <div ref={swiperRef} className="swiper">
+              <div className="swiper-wrapper">
+                {products.map((product: Product) => {
                 const imageUrl = product.image?.[0]?.url
                   ? `${strapiUrl}${product.image[0].url}`
                   : '/images/product-placeholder.svg';
@@ -117,6 +126,7 @@ export default function FeaturedProducts({ products, strapiUrl }: FeaturedProduc
             <div className="swiper-button-next"></div>
           </div>
         </div>
+        )}
       </div>
 
       <style>{`
