@@ -159,18 +159,19 @@ export default function FeaturedProducts({ products, strapiUrl }: FeaturedProduc
         }
 
         .product-image-wrapper {
-          background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-          padding: 40px 20px;
+          background: white;
+          padding: 0;
           display: flex;
           align-items: center;
           justify-content: center;
-          min-height: 250px;
+          min-height: 300px;
+          overflow: hidden;
         }
 
         .product-image {
           width: 100%;
-          height: 200px;
-          object-fit: contain;
+          height: 300px;
+          object-fit: cover;
           transition: transform 0.3s ease;
         }
 
