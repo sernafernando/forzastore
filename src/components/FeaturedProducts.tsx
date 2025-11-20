@@ -79,9 +79,12 @@ export default function FeaturedProducts({ products, strapiUrl }: FeaturedProduc
             <div ref={swiperRef} className="swiper">
               <div className="swiper-wrapper">
                 {products.map((product: Product) => {
+                // Image is now directly in the product object as an array
                 const imageUrl = product.image?.[0]?.url
                   ? `${strapiUrl}${product.image[0].url}`
                   : '/images/product-placeholder.svg';
+
+                console.log('Product image URL:', imageUrl);
 
                 return (
                   <div key={product.id} className="swiper-slide">

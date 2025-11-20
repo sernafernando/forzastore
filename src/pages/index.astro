@@ -15,19 +15,19 @@ const STRAPI_URL = import.meta.env.PUBLIC_STRAPI_URL || 'http://localhost:1337';
 // Fetch featured products from Strapi
 let featuredProducts = [];
 try {
-  console.log('Fetching from:', `${STRAPI_URL}/api/products?filters[featured][$eq]=true&populate=image`);
-  const response = await fetch(`${STRAPI_URL}/api/products?filters[featured][$eq]=true&populate=image`);
+  console.log('Fetching from:', `${STRAPI_URL}/api/products?filters[featured][$eq]=true&populate=*`);
+  const response = await fetch(`${STRAPI_URL}/api/products?filters[featured][$eq]=true&populate=*`);
   console.log('Response status:', response.status);
   const data = await response.json();
   console.log('Products data:', JSON.stringify(data, null, 2));
   featuredProducts = data.data.map((item: any) => ({
     id: item.id,
-    name: item.attributes.name,
-    model: item.attributes.model,
-    description: item.attributes.description,
-    image: item.attributes.image?.data,
-    capacity: item.attributes.capacity,
-    features: item.attributes.features
+    name: item.name,
+    model: item.model,
+    description: item.description,
+    image: item.image,
+    capacity: item.capacity,
+    features: item.features
   }));
   console.log('Mapped products:', featuredProducts.length);
 } catch (error) {
